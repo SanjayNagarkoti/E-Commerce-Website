@@ -6,33 +6,49 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background: rgb(235, 235, 239);
+}
+hr{
+    border: 1px solid rgb(235, 235, 239);
+}
 header{
     background: var(--primary-color);
     font-family: "Montserrat", serif;
     font-weight: 400;
+    min-height: min-content;
+    height: min-content;
+    padding: 5px 0px;
 }
 
 nav{
     display: flex;
-    align-items: center;
+    align-items:center ;
+    margin: 0px 10px;
+    gap: 5px;
 }
 .logo{
     display: flex;
     align-items: center;
+    margin: 0px 10px;
 }
 .logo img{
     width: 130px;
     padding: 0px 20px;
 }
 nav ul{
+    box-sizing: border-box;
     display: flex;
     height: 10vh;
     justify-content: flex-start;
     align-items: center;
+    margin: 0px 10px;
+    padding: 0px 5px;
 }
 nav ul li{
     list-style: none;
     padding: 20px;
+    width: 50px;
 }
 nav ul li a{
     text-decoration: none;
@@ -68,11 +84,59 @@ nav ul li a:hover{
 }
 .container{
     min-height: calc(100vh - 25vh);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
 }
 
+.slider-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background:white;
+    width:100vw;
+    height: 60vh;
+}
+.slider{
+    border: black;
+    background: rgb(235, 235, 239);
+    width:90vw;
+    min-height: fit-content;
+    height: 60vh;
+}
+.slider img{
+    object-fit: cover;
+}
+
+.card{
+    background-color: white;
+    border: 1px solid black;
+    width: 95vw;
+    height: 50vh;
+    min-height: fit-content;
+    margin: 0px auto;
+}
+.card-top{
+    width: 99%;
+    height: 30px;
+    margin: 7px auto;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.products{
+    width: 99%;
+    height: 80%;
+    border: 1px solid black;
+    margin: 10px 0px;
+}
 footer{
     height: 15vh;
     width: 100vw;
+    margin-top: 10px;
     background: var(--primary-color);
     color: aliceblue;
     font-family: "Montserrat", serif;
