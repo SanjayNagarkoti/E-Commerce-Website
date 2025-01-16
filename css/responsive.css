@@ -1,6 +1,14 @@
-@media  screen and (max-width:970px) {
+@media  screen and (max-width:950px) {
     body{
         background: #000;
     }
-    
+    nav{
+        flex-direction: column;
+    }
+    .logo{
+        align-self: flex-start;
+    }
+    nav ul{
+        visibility: collapse;
+    }
 }

@@ -18,19 +18,17 @@ header{
     font-weight: 400;
     min-height: min-content;
     height: min-content;
-    padding: 5px 0px;
+    padding: 2px 0px;
 }
 
 nav{
     display: flex;
     align-items:center ;
-    margin: 0px 10px;
-    gap: 5px;
 }
 .logo{
     display: flex;
     align-items: center;
-    margin: 0px 10px;
+    
 }
 .logo img{
     width: 130px;
@@ -43,7 +41,6 @@ nav ul{
     justify-content: flex-start;
     align-items: center;
     margin: 0px 10px;
-    padding: 0px 5px;
 }
 nav ul li{
     list-style: none;
@@ -62,7 +59,7 @@ nav ul li a:hover{
     align-items: center;
     background: white;
     height: 35px;
-    margin: 0px 50px;
+    margin: 20px 50px;
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -76,6 +73,7 @@ nav ul li a:hover{
     padding: 0px 10px; 
 }
 .searchbar button{
+    box-sizing: border-box;
     background: none;
     border: none;
     color:grey ;
@@ -111,12 +109,15 @@ nav ul li a:hover{
 }
 
 .card{
+    min-height: 0px;
     background-color: white;
     border: 1px solid black;
     width: 95vw;
     height: 50vh;
     min-height: fit-content;
-    margin: 0px auto;
+    margin: 500px auto;
+    display: flex;
+    flex-direction: column;
 }
 .card-top{
     width: 99%;
@@ -128,14 +129,26 @@ nav ul li a:hover{
 
 }
 .products{
-    width: 99%;
+    min-height: 0px;
+    width: 98%;
     height: 80%;
     border: 1px solid black;
-    margin: 10px 0px;
+    margin: 10px;
+    padding: 5px;
+}
+.item{
+    min-height: 0px;
+    width: 250px;
+    height: 100%;
+    border:1px solid black;
+}
+.item img{
+    width: 200px;
+    height: 200px;
 }
 footer{
     height: 15vh;
-    width: 100vw;
+    width: 100vw;   
     margin-top: 10px;
     background: var(--primary-color);
     color: aliceblue;
