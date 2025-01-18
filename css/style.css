@@ -128,22 +128,65 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
+    border: 1px solid black;
     background: white;
-    width: 100vw;
     height: 60vh;
+    overflow: hidden;
+    
 }
 
-.slider {
-    border: black;
+.slider1 {
+    border: 1px solid black;
     background: var(--bg-color);
     width: 90vw;
     min-height: fit-content;
     height: 60vh;
+    flex-shrink: 0;
+    transform: translate(-5vw);
+    animation:  slide1 5s  2s infinite forwards;
+    background: red;
+}
+.slider2 {
+    border: 1px solid black;
+    background: var(--bg-color);
+    width: 90vw;
+    min-height: fit-content;
+    height: 60vh;
+    flex-shrink: 0;
+    animation:  slide2 5s  2s infinite forwards;
+    background: blue;
+}
+.slider3 {
+    border: 1px solid black;
+    background: var(--bg-color);
+    width: 90vw;
+    min-height: fit-content;
+    height: 60vh;
+    flex-shrink: 0;
+    transform: translate(5vw);
 }
 
 .slider img {
     object-fit: cover;
+}
+
+@keyframes slide1 {
+    0%{
+        transform: translate(-5vw);
+    }
+    100%{
+        transform: translate(90vw);
+    }
+    
+}
+@keyframes slide2 {
+    0%{
+        transform: translate(0vw);
+    }
+    100%{
+        transform: translate(95vw);
+    }
+    
 }
 
 .card {
