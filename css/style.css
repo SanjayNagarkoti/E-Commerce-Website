@@ -124,69 +124,71 @@ nav ul li a:hover {
 
 }
 
+/* Slider container */
 .slider-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
     background: white;
     height: 60vh;
     overflow: hidden;
-    
+    position: relative;
 }
 
-.slider1 {
-    border: 1px solid black;
-    background: var(--bg-color);
-    width: 90vw;
-    min-height: fit-content;
-    height: 60vh;
-    flex-shrink: 0;
-    transform: translate(-5vw);
-    animation:  slide1 5s  2s infinite forwards;
-    background: red;
+/* Individual sliders */
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: white;
 }
-.slider2 {
-    border: 1px solid black;
-    background: var(--bg-color);
-    width: 90vw;
-    min-height: fit-content;
-    height: 60vh;
-    flex-shrink: 0;
-    animation:  slide2 5s  2s infinite forwards;
-    background: blue;
+
+/* Animation */
+@keyframes sliderAnimation {
+    0% {
+        transform: translateX(100%); /* Off-screen (right) */
+        z-index: 1; /* Ensure current slider is above others */
+    }
+    15% {
+        transform: translateX(0%); /* Center position */
+        z-index: 2; /* Current slider stays on top */
+    }
+    25% {
+        transform: translateX(-100%); /* Move off-screen (left) */
+        z-index: 1; /* Lower priority for smooth overlap */
+    }
+    26% {
+        transform: translateX(-100%); /* Ensure it's off-screen */
+    }
+    100% {
+        transform: translateX(-100%); /* Remain off-screen */
+    }
 }
-.slider3 {
-    border: 1px solid black;
-    background: var(--bg-color);
-    width: 90vw;
-    min-height: fit-content;
-    height: 60vh;
-    flex-shrink: 0;
-    transform: translate(5vw);
+
+/* Assign animations to sliders */
+.slider:nth-child(1) {
+    animation: sliderAnimation 6s infinite;
 }
+
+.slider:nth-child(2) {
+    animation: sliderAnimation 6s infinite;
+    animation-delay: 2s; /* Starts after the first slider begins */
+}
+
+.slider:nth-child(3) {
+    animation: sliderAnimation 6s infinite;
+    animation-delay: 4s; /* Starts after the second slider begins */
+}
+
 
 .slider img {
     object-fit: cover;
-}
-
-@keyframes slide1 {
-    0%{
-        transform: translate(-5vw);
-    }
-    100%{
-        transform: translate(90vw);
-    }
-    
-}
-@keyframes slide2 {
-    0%{
-        transform: translate(0vw);
-    }
-    100%{
-        transform: translate(95vw);
-    }
-    
+    width: 100%;
+    height: 100%;
 }
 
 .card {
