@@ -3,12 +3,3 @@
         background: #000;
     }
     nav{
-        flex-direction: column;
-    }
-    .logo{
-        align-self: flex-start;
-    }
-    nav ul{
-        visibility: collapse;
-    }
-}
